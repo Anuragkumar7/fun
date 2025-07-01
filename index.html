@@ -9,34 +9,42 @@
         body {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #fff;
-            height: 100vh;
             margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .dropdown {
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
+            padding: 2rem;
             text-align: center;
         }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
         .dropdown-toggle {
             padding: 1rem 2rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
+
         .dropdown-menu {
             background-color: #1f1f1f;
             border-radius: 0.5rem;
-            animation: fadeIn 0.5s ease-in-out;
+            animation: fadeIn 0.4s ease-in-out;
         }
+
         .dropdown-item {
             color: #fff;
         }
+
         .dropdown-item:hover {
             background-color: #343a40;
         }
@@ -45,20 +53,33 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .dropdown-toggle {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Jungle... I mean, Corporate Life 🏢💼</h1>
+    <div class="content-wrapper">
+        <h1>Welcome to the Jungle... I mean, Corporate Life 🏢💼</h1>
 
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Don't make these 3 mistakes in Corporate
-        </button>
-        <ul class="dropdown-menu text-center">
-            <li><a class="dropdown-item" href="#">Bhai kaam karle, mai bhi teri hi tarah hu 😂</a></li>
-            <li><a class="dropdown-item" href="#">Mat soch tu sab kuchh theek kar lega 😅</a></li>
-            <li><a class="dropdown-item" href="#">Chai peene ka bahana bhi limited hai ☕</a></li>
-        </ul>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Don't make these 3 mistakes in Corporate
+            </button>
+            <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="#">Bhai kaam karle, mai bhi teri hi tarah hu 😂</a></li>
+                <li><a class="dropdown-item" href="#">Mat soch tu sab kuchh theek kar lega 😅</a></li>
+                <li><a class="dropdown-item" href="#">Chai peene ka bahana bhi limited hai ☕</a></li>
+            </ul>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
